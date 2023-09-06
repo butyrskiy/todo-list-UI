@@ -1,0 +1,17 @@
+/* Vendor */
+@import "./vendor/normalize";
+@import "./vendor/delete-input-arrows";
+
+/* Basic */
+@import "./vars";
+@import "./mixins";
+@import "./fonts";
+@import "./global";
+
+/* Large components */
+@import "./components/header";
+@import "./components/add-task";
+@import "./components/task-list";
+
+/* Small components */
+@import "./components/statuses";

@@ -1,0 +1,19 @@
+.add-task {
+  margin-bottom: 35px;
+
+  &__input {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+    color: #717377;
+
+    &::placeholder {
+      color: #d5d5d5;
+    }
+
+    &:focus {
+      outline-color: #597cce;
+    }
+  }
+}
