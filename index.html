@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <h1 class="header__title">Todo List</h1>
+</header>
+ <div class="add-task">
+  <form class="add-task__form" id="add-task__form">
+    <input
+      type="text"
+      class="add-task__input input-reset"
+      placeholder="Enter task name"
+      autocomplete="off"
+    />
+  </form>
+</div>
+
+      <div class="task-list">
+  <ul class="task-list__box list-reset">
+    <li class="task__item">
+      <div class="task__item-top">
+        <p class="task__item-name done">
+          Сходить к парикмахеру сегод и подстричься
+        </p>
+      </div>
+      <div class="task__item-bottom">
+        <div>
+          <select class="task__item-bottom-priority">
+            <option value="low">Low</option>
+            <option value="middle">Middle</option>
+            <option value="high">High</option>
+          </select>
+          <select class="task__item-bottom-status">
+            <option value="inbox">Inbox</option>
+            <option value="In progress">In Progress</option>
+            <option value="Pause">Pause</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+        <div class="task__item-bottom-btn">
+          <button title="Delete task" class="btn btn-delete btn-reset">
+            X
+          </button>
+          <button title="Сomplete task" class="btn btn-done btn-reset">
+            V
+          </button>
+        </div>
+      </div>
+    </li>
+    <li class="task__item low">
+      <div class="task__item-top">
+        <p class="task__item-name">Сходить к парикмахеру сегод и подстричься</p>
+      </div>
+      <div class="task__item-bottom">
+        <div>
+          <select class="task__item-bottom-priority">
+            <option value="low">Low</option>
+            <option value="middle">Middle</option>
+            <option value="high">High</option>
+          </select>
+          <select class="task__item-bottom-status">
+            <option value="inbox">Inbox</option>
+            <option value="In progress">In Progress</option>
+            <option value="Pause">Pause</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+        <div class="task__item-bottom-btn">
+          <button title="Delete task" class="btn btn-delete btn-reset">
+            X
+          </button>
+          <button title="Сomplete task" class="btn btn-done btn-reset">
+            V
+          </button>
+        </div>
+      </div>
+    </li>
+    <li class="task__item middle">
+      <div class="task__item-top">
+        <p class="task__item-name">Сходить к парикмахеру сегод и подстричься</p>
+      </div>
+      <div class="task__item-bottom">
+        <div>
+          <select class="task__item-bottom-priority">
+            <option value="low">Low</option>
+            <option value="middle">Middle</option>
+            <option value="high">High</option>
+          </select>
+          <select class="task__item-bottom-status">
+            <option value="inbox">Inbox</option>
+            <option value="In progress">In Progress</option>
+            <option value="Pause">Pause</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+        <div class="task__item-bottom-btn">
+          <button title="Delete task" class="btn btn-delete btn-reset">
+            X
+          </button>
+          <button title="Сomplete task" class="btn btn-done btn-reset">
+            V
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <script defer src="js/main.min.js"></script>
+  </body>
+</html>
