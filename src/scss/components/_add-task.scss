@@ -9,11 +9,11 @@
     color: #717377;
 
     &::placeholder {
-      color: #d5d5d5;
+      color: var(--color-alto);
     }
 
     &:focus {
-      outline-color: #597cce;
+      outline-color: var(--color-danube);
     }
   }
 }

@@ -1,24 +1,31 @@
 .task-list {
   max-width: 100%;
-  max-height: 400px;
+  max-height: 100%;
   min-width: 450px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: scroll;
-  background-color: #fff;
+  background-color: var(--color-mischka);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
 }
 
 .task__item {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   font-size: 1.2rem;
   width: 500px;
   border-top: 1px solid #e5e5e5;
+  background-color: #fff;
 
   &-name {
     margin: 0;
     margin-bottom: 6px;
-    color: #4f5053;
+    color: var(--color-abbey);
   }
 
   &-bottom {
@@ -30,16 +37,16 @@
       font-size: 0.8rem;
       cursor: pointer;
       border: none;
-      color: #4f5053;
-      border: 1px solid #4f5053;
+      color: var(--color-abbey);
+      border: 1px solid var(--color-abbey);
     }
 
     &-status {
       font-size: 0.8rem;
       cursor: pointer;
       border: none;
-      color: #4f5053;
-      border: 1px solid #4f5053;
+      color: var(--color-abbey);
+      border: 1px solid var(--color-abbey);
     }
 
     .btn {
