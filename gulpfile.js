@@ -236,4 +236,4 @@ exports.cleanBuild = cleanBuild;
 exports.default = series(cleanBuild, htmlInclude, javascript, fonts, resourcesToBuild, sprite, styles, images, watchFiles);
 
 // ? Запуск сборки в режиме 'production'
-exports.build = series(cleanBuild, htmlInclude, javascriptBuild, fonts, resourcesToBuild, sprite, stylesBuild, images, watchFiles);
+exports.build = series(cleanBuild, htmlInclude, javascriptBuild, fonts, resourcesToBuild, sprite, stylesBuild, images);
