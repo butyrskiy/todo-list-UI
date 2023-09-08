@@ -1,5 +1,5 @@
-import { createDOMElement } from "./createDOMElement";
-import { STATUS, PRIORITY, form, input } from "./variebles";
+import { createDOMElement } from "./workWithDOMElements";
+import { STATUS, PRIORITY, form, input } from "./constants";
 import { todo } from "../main";
 
 function addTask(e) {
@@ -22,7 +22,8 @@ function addTaskToArray(taskName) {
   todo.push({
     name: taskName,
     status: STATUS.INBOX,
-    priority: PRIORITY.LOW
+    priority: PRIORITY.LOW,
+    id: Date.now(),
   });
 }
 

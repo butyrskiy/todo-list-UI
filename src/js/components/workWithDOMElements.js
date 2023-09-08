@@ -1,4 +1,4 @@
-const taskListBox = document.querySelector('.task-list__box');
+import { taskBox } from "./constants";
 
 function createDOMElement(taskName) {
   const html = `
@@ -31,7 +31,16 @@ function createDOMElement(taskName) {
     </div>
   </li>`
   
-  taskListBox.insertAdjacentHTML('afterbegin', html);
+  taskBox.insertAdjacentHTML('afterbegin', html);
 }
 
-export { createDOMElement };
+function deleteDOMElement(e) {
+  if(e.target.className === 'btn btn-delete btn-reset') {
+    const elem = e.target;
+    const parent = elem.closest('.task__item');
+
+    parent.remove();
+  }
+}
+
+export { createDOMElement, deleteDOMElement };
