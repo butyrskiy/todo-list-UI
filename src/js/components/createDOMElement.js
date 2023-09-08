@@ -1,6 +1,6 @@
 const taskListBox = document.querySelector('.task-list__box');
 
-function createTaskFragment(taskName) {
+function createDOMElement(taskName) {
   const html = `
   <li class="task__item">
     <div class="task__item-top">
@@ -34,4 +34,4 @@ function createTaskFragment(taskName) {
   taskListBox.insertAdjacentHTML('afterbegin', html);
 }
 
-export { createTaskFragment };
+export { createDOMElement };
