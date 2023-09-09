@@ -18,4 +18,3 @@ const form = document.querySelector('.add-task__form');
 const taskBox = document.querySelector('.task-list__box');
 const deleteBtn = document.querySelector('.btn-delete');
 const doneBtn = document.querySelector('.btn-done');
-// const taskName = document.querySelector('.task__item-name');

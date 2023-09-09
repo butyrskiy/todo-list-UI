@@ -10,8 +10,8 @@ function addTask(e) {
   if(taskName === '') {
     console.error('Enter the name of task!');
   } else {
-    createDOMElement(taskName);
     addTaskToArray(taskName);
+    createDOMElement(taskName);
 
     form.reset();
     console.log(todo); //! DELETE

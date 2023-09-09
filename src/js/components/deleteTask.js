@@ -1,6 +1,7 @@
 import { todo } from "../main";
 import { deleteDOMElement } from "./workWithDOMElements";
 import { findTaskIndex } from "./smallFunction";
+import { render } from "./render";
 
 function deleteTask(e) {
   const elem = e.target;
@@ -18,7 +19,7 @@ function deleteTask(e) {
     console.error(task);
   }
 
-  console.log(todo);
+  render(todo);
 }
 
 
