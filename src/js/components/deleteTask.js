@@ -1,26 +1,28 @@
 import { todo } from "../main";
 import { deleteDOMElement } from "./workWithDOMElements";
-import { findTaskIndex } from "./smallFunction";
+import { searchTaskName, findTaskIndex } from "./smallFunction";
 import { render } from "./render";
 
 function deleteTask(e) {
   const elem = e.target;
-  const parent = elem.closest('.task__item-bottom');
-  const prevElemSibling = parent.previousElementSibling;
-  const firstElemChild = prevElemSibling.firstElementChild;
-  const taskName = firstElemChild.textContent;
-  const task = findTaskIndex(taskName);
-  
-  deleteDOMElement(e);
+  const deleteBtn = elem.classList.contains('btn-delete');
 
-  if(typeof(task) === 'number') {
-    todo.splice(task, 1);
-  } else {
-    console.error(task);
+  if(deleteBtn) {
+    const taskName = searchTaskName(elem);
+    const taskIndex = findTaskIndex(taskName);
+
+    if(taskIndex >= 0) {
+      todo.splice(taskIndex, 1);
+    } else {
+      console.error('The task is not defined');
+    }
+    
+    deleteDOMElement(e);
+
+    render(todo);
+
+    console.log(todo); //! DELETE
   }
-
-  render(todo);
 }
-
 
 export { deleteTask };

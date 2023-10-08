@@ -1,11 +1,11 @@
 import { createDOMElement } from "./workWithDOMElements";
 import { taskBox } from "./constants";
 
-function render(arr) {
+function render(todo) {
   taskBox.innerHTML = '';
 
-  arr.forEach(item => {
-    createDOMElement(item.name);
+  todo.forEach(task => {
+    createDOMElement(task);
   });
 }
 

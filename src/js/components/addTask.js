@@ -1,20 +1,23 @@
 import { createDOMElement } from "./workWithDOMElements";
 import { STATUS, PRIORITY, form, input } from "./constants";
 import { todo } from "../main";
+import { render } from "./render";
 
 function addTask(e) {
   e.preventDefault();
 
   const taskName = input.value;
 
-  if(taskName === '') {
-    console.error('Enter the name of task!');
-  } else {
-    addTaskToArray(taskName);
-    createDOMElement(taskName);
-
-    form.reset();
-    console.log(todo); //! DELETE
+  try {
+    if(taskName === '' || taskName.length > 30) {
+      throw new Error('Task length name not valid!');
+    } else {
+      addTaskToArray(taskName);
+      render(todo);
+      form.reset();
+    }
+  } catch (error) {
+    console.log(error.message);
   }
 }
 
@@ -23,8 +26,8 @@ function addTaskToArray(taskName) {
     name: taskName,
     status: STATUS.INBOX,
     priority: PRIORITY.LOW,
-    id: Date.now(),
   });
+  console.log(todo); // ! DELETE
 }
 
 export { addTask };
