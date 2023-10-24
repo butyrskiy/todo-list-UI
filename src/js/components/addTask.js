@@ -1,7 +1,7 @@
-import { createDOMElement } from "./workWithDOMElements";
-import { STATUS, PRIORITY, form, input } from "./constants";
+import { form, input } from "./constants";
 import { todo } from "../main";
 import { render } from "./render";
+import { Task } from "./classes";
 
 function addTask(e) {
   e.preventDefault();
@@ -22,12 +22,10 @@ function addTask(e) {
 }
 
 function addTaskToArray(taskName) {
-  todo.push({
-    name: taskName,
-    status: STATUS.INBOX,
-    priority: PRIORITY.LOW,
-  });
-  console.log(todo); // ! DELETE
+  const newTask = new Task(taskName);
+  todo.push(newTask);
+
+  console.log(todo);
 }
 
 export { addTask };
